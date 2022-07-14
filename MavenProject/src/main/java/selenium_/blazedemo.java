@@ -46,7 +46,9 @@ public class blazedemo {
 		Select cardType = new Select(driver.findElement(By.id("cardType")));
 		cardType.selectByValue("visa");
 		driver.findElement(By.id("creditCardNumber")).sendKeys("1234567887654321");
-		driver.findElement(By.id("creditCardMonth")).sendKeys("11");
+		driver.findElement(By.id("creditCardMonth")).clear();
+		driver.findElement(By.id("creditCardMonth")).sendKeys("10");
+		driver.findElement(By.id("creditCardYear")).clear();
 		driver.findElement(By.id("creditCardYear")).sendKeys("2025");
 		driver.findElement(By.id("nameOnCard")).sendKeys("Chirag Sheta");
 		driver.findElement(By.id("rememberMe")).click();
